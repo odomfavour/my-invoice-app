@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import InvoiceView from "../views/InvoiceView.vue";
 
 const routes = [
   {
@@ -16,6 +17,11 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
+  {
+    path: "/invoice/:invoiceId",
+    name: "Invoice",
+    component: InvoiceView,
+  }
 ];
 
 const router = createRouter({
